@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activity.profile"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.AddMedical"
+            android:label="@string/title_activity_add_medical"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
