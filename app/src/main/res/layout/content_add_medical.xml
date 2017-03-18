@@ -7,26 +7,46 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.sodevan.bhamaheal.Activity.AddMedical"
     tools:showIn="@layout/activity_add_medical">
+    <io.victoralbertos.breadcumbs_view.BreadcrumbsView
+        android:id="@+id/breadcrumbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:numberOfSteps="5"
+        app:visitedStepBorderDotColor="@color/colorVisited"
+        app:visitedStepFillDotColor="@color/colorVisited"
+        app:nextStepBorderDotColor="@color/colorNext"
+        app:nextStepFillDotColor="@color/colorNext"
+        app:visitedStepSeparatorColor="@color/colorVisited"
+        app:nextStepSeparatorColor="@color/colorNext"
+        app:radiusDot="@dimen/radius_dot"
+        app:sizeDotBorder="@dimen/size_dot_border"
+        app:heightSeparator="@dimen/height_separator"/>
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_below="@+id/breadcrumbs"
+    android:layout_marginTop="30dp"
+    android:id="@+id/containsViewFl">
     <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/viewflip"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Text 1"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Text 2"/>
 
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/firstlayout"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/secondlayout"/>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/thirdlayout" />
 
 
         </ViewFlipper>

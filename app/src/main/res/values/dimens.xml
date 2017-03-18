@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="size_dot_border">1dp</dimen>
+    <dimen name="height_separator">1dp</dimen>
+    <dimen name="radius_dot">5dp</dimen>
 </resources>
