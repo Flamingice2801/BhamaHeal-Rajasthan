@@ -1,4 +1,4 @@
-#Bar Graph for Disease Vs Number of People Affected
+#Bar Graph for Age vs Health Scores
 library(ggplot2)
 graphtwo<-read.csv("agevscore.csv",TRUE,",")
 class(graphtwo)
