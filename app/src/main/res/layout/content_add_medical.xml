@@ -26,6 +26,7 @@
     android:layout_height="match_parent"
     android:layout_below="@+id/breadcrumbs"
     android:layout_marginTop="30dp"
+    android:layout_marginLeft="20dp"
     android:id="@+id/containsViewFl">
     <ViewFlipper
         android:layout_width="match_parent"
@@ -47,6 +48,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             layout="@layout/thirdlayout" />
+
+        <include android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                layout="@layout/forthlayout"/>
 
 
         </ViewFlipper>

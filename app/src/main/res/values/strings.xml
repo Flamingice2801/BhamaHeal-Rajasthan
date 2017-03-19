@@ -2,4 +2,5 @@
     <string name="app_name">BhamaHeal</string>
     <string name="title_activity_profile">profile</string>
     <string name="title_activity_add_medical">AddMedical</string>
+    <string name="fa_plus">&#xf067;</string>
 </resources>

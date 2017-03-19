@@ -7,18 +7,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Medical History and Previous Diseases"
-        android:id="@+id/Heading_history"/>
+        android:text="Previous Medication"
+        android:id="@+id/Heading_medic"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fa_plus"
         android:textSize="20dp"
         android:textColor="@color/colorAccent"
-        android:id="@+id/one"/>
+        android:id="@+id/two"/>
 
     <LinearLayout
-        android:id="@+id/thirdlay"
+        android:id="@+id/forthlay"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

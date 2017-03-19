@@ -8,9 +8,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.sodevan.bhamaheal.R;
 
@@ -18,7 +15,6 @@ public class profile extends AppCompatActivity {
     public static final String MyPREFERENCES="login_prefs";
     SharedPreferences sharedPreferences;
     String bhID;
-    RelativeLayout rl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +22,7 @@ public class profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         bhID=sharedPreferences.getString("bhID",null);
-        rl= (RelativeLayout) findViewById(R.id.ProfRel);
-        LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(150,150);
-        TextView tv=new TextView(this);
-        lp.setMargins(20,10,10,20);
-        tv.setLayoutParams(lp);
-        tv.setWidth(10);
-        tv.setText("heyyy");
 
-        rl.addView(tv);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

@@ -15,10 +15,14 @@ public class MainActivity extends AppCompatActivity {
     EditText bhID;
     Button Enter;
     public static final String MyPREFERENCES="login_prefs";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedpreferences.edit();
         bhID= (EditText) findViewById(R.id.BhamashahID);
