@@ -1,0 +1,31 @@
+Structure,Disease,No of People Affected,District
+1,Diabetes,2925,Ajmer
+2,Hypertension,7628,Ajmer
+3,Tuberculosis,4893,Ajmer
+4,Asthma,2376,Ajmer
+5,Arthritis,2120,Ajmer
+6,Other Chronic Diseases,9822,Ajmer
+7,Diabetes,6904,Jaipur
+8,Hypertension,5932,Jaipur
+9,Tuberculosis,6797,Jaipur
+10,Asthma,2958,Jaipur
+11,Arthritis,5791,Jaipur
+12,Other Chronic Diseases,1028,Jaipur
+13,Diabetes,3271,kota
+14,Hypertension,2956,kota
+15,Tuberculosis,2845,kota
+16,Asthma,6448,kota
+17,Arthritis,8096,kota
+18,Other Chronic Diseases,2845,kota
+19,Diabetes,4552,udaipur
+20,Hypertension,5515,udaipur
+21,Tuberculosis,9574,udaipur
+22,Asthma,3369,udaipur
+23,Arthritis,4030,udaipur
+24,Other Chronic Diseases,3691,udaipur
+25,Diabetes,1284,sirohi
+26,Hypertension,9440,sirohi
+27,Tuberculosis,4493,sirohi
+28,Asthma,3832,sirohi
+29,Arthritis,7250,sirohi
+30,Other Chronic Diseases,8305,sirohi
