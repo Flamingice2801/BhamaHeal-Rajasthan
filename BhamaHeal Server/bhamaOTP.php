@@ -3,7 +3,7 @@ $mobile = $_POST['number'];
 $otp = rand(1111,9999); // OTP code here.
 
 if(!empty($mobile) && $mobile !== ''){ 
-$api_key = '356C33CE1AEC4A';
+$api_key = '<insert API key here>';
 $contacts = $mobile;
 $from = 'BMHEAL';
 $smsformat = "Bhama Heal OTP is ".$otp;
