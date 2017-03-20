@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$('.dynamic-content').load('content/overview.html') ;
+$('.dynamic-content').load('content/disease.html') ;
 
     var old='overview'  ;
     var oldb='maxh' ;
@@ -30,6 +30,12 @@ $('.dynamic-content').load('content/overview.html') ;
      $('.'+bolder+'c').addClass('colorstrip-'+boldering) ;
      oldb = bolder ;
      return false;
+ });
+
+
+ $(document.body).on('change',  '.disease', function(){
+   var district =  this.value ;
+   alert(district) ;
  });
 
 
