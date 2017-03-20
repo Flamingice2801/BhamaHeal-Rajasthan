@@ -1,102 +1,111 @@
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:id="@+id/linear2"
-    android:orientation="horizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <TableLayout
-        android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#004957"
+    android:padding="10dp"
+    >
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eyehead"
+                    android:text="Eye-Test"
+                    android:textColor="#fff"
+                    android:padding="20dp"/>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eyehead"
+                    android:id="@+id/eyed">
+
+                 <EditText
+                     android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:background="#FFF"
+                    android:textColor="#00C6AF"
+                    android:id="@+id/lefteye"
+                     android:hint="Left Eye"
+                     android:padding="8dp"
+                     />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:background="#FFF"
+                    android:textColor="#00C6AF"
+                    android:id="@+id/righteye"
+                    android:layout_toRightOf="@id/lefteye"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Right Eye"
+                    android:padding="8dp"
+
+                    />
+
+            </RelativeLayout>
+
+    <EditText
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        >
-        <TableRow
-            android:layout_width="match_parent"
-            android:weightSum="1">
-            <ImageView
-                android:layout_height="50dp"
-                android:layout_width="50dp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_weight="0.5"
-                />
-            <ImageView
-                android:layout_height="50dp"
-                android:layout_width="50dp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_weight="0.5"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:weightSum="1">
-            <EditText
-                android:layout_height="50dp"
-                android:layout_width="30dp"
-                android:layout_weight="0.4"
-                android:background="#000"
-                android:textColor="#fff"
-                android:id="@+id/lefteye"
-                />
-            <TextView android:text=""
-                android:layout_weight="0.2"/>
-            <EditText
-                android:layout_height="50dp"
-                android:layout_width="30dp"
-                android:background="#FFF"
-                android:textColor="#000"
-                android:layout_weight="0.4"
-                android:id="@+id/righteye"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Weight"
-                android:layout_weight="0.4"/>
-            <TextView
-                android:text=""
-                android:layout_weight="0.2"/>
-            <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="0.4"
-                android:id="@+id/weight"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Height"
-                android:layout_weight="0.4"/>
-            <TextView
-                android:text=""
-                android:layout_weight="0.2"/>
-            <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="0.4"
-                android:id="@+id/height"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Sugar"
-                android:layout_weight="0.4"/>
-            <TextView
-                android:text=""
-                android:layout_weight="0.2"/>
-            <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_weight="0.4"
-                android:id="@+id/sugar"/>
-        </TableRow>
-        <EditText android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:hint="Remarks"
-            android:id="@+id/remark"
-            />
-    </TableLayout>
+        android:layout_width="match_parent"
+        android:layout_below="@id/eyed"
+        android:id="@+id/weight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:padding="8dp"
+        android:hint="Weight"
+
+        />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="0.4"
+        android:id="@+id/height"
+        android:layout_below="@id/weight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:padding="8dp"
+        android:hint="Height"
+        />
 
 
-</LinearLayout>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="0.4"
+        android:id="@+id/sugar"
+        android:layout_below="@id/height"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:padding="8dp"
+        android:hint="Sugar"
+        />
+
+
+    <EditText android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Remarks"
+        android:id="@+id/remark"
+        android:layout_below="@id/sugar"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:padding="8dp"
+        />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

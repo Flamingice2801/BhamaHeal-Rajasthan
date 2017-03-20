@@ -101,11 +101,14 @@ public class AddMedical extends AppCompatActivity {
         tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                final LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                lp.setMargins(0,30,0,30);
                 EditText et=new EditText(AddMedical.this);
                 et.setLayoutParams(lp);
                 et.setEms(10);
-                et.setHint("HINT");
+                et.setHint("Previous Medication");
+                et.setBackground(getDrawable(R.drawable.shape1));
+                et.setPadding(40,40,40,40);
                 int id=1;
                 et.setId(id);
                 mLayout2.addView(et);
@@ -117,11 +120,15 @@ public class AddMedical extends AppCompatActivity {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                final LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                layoutParams.setMargins(0,30,0,30);
                 EditText et=new EditText(AddMedical.this);
                 et.setLayoutParams(layoutParams);
                 et.setEms(10);
-                et.setHint("HINT");
+                et.setHint("Medical History");
+                et.setBackground(getDrawable(R.drawable.shape1));
+                et.setPadding(40,40,40,40);
+
                 int id=1;
                 et.setId(id);
                 mLayout.addView(et);

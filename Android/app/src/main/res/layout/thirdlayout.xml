@@ -2,20 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingRight="30dp"
 
     >
-    <TextView
+
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Medical History and Previous Diseases"
-        android:id="@+id/Heading_history"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fa_plus"
-        android:textSize="20dp"
-        android:textColor="@color/colorAccent"
-        android:id="@+id/one"/>
+        android:layout_height="37dp"
+        android:layout_marginBottom="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Add Medical History and Previous Diseases"
+            android:id="@+id/Heading_history"
+            android:background="#00C6AF"
+            android:textColor="#fff"
+            android:padding="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/fa_plus"
+            android:textSize="20dp"
+            android:textColor="#004957"
+            android:layout_toRightOf="@id/Heading_history"
+            android:id="@+id/one"
+            android:padding="8dp"
+            android:background="#fff"
+            />
+    </RelativeLayout>
+
+
 
     <LinearLayout
         android:id="@+id/thirdlay"
