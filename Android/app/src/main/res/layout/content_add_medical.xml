@@ -20,7 +20,8 @@
         app:nextStepSeparatorColor="@color/colorNext"
         app:radiusDot="@dimen/radius_dot"
         app:sizeDotBorder="@dimen/size_dot_border"
-        app:heightSeparator="@dimen/height_separator"/>
+        app:heightSeparator="@dimen/height_separator"
+        android:layout_marginTop="10dp"/>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
