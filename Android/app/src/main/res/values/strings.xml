@@ -3,4 +3,5 @@
     <string name="title_activity_profile">profile</string>
     <string name="title_activity_add_medical">AddMedical</string>
     <string name="fa_plus">&#xf067;</string>
+    <string name="hosturl">http://172.16.43.153:8888/BhamaHeal/</string>
 </resources>

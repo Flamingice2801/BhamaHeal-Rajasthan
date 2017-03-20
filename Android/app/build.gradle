@@ -32,4 +32,5 @@ dependencies {
     compile 'com.android.support:design:25.1.1'
     testCompile 'junit:junit:4.12'
     compile 'com.github.VictorAlbertos:BreadcrumbsView:0.0.3'
+    compile 'com.farbod.labelledspinner:labelledspinner:1.1.5'
 }

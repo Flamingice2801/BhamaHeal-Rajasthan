@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="BreadcrumbsView-0.0.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/c5979922e4d27226e8a240cb5cc9ab63db9f2688/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/c5979922e4d27226e8a240cb5cc9ab63db9f2688/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.VictorAlbertos/BreadcrumbsView/0.0.3/e4bc1f1dbee52818dadcdfd93a17f6810b94185b/BreadcrumbsView-0.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
