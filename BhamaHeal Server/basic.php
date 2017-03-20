@@ -12,8 +12,7 @@ $conn=new mysqli($host,$uname,$pass,$DB_NAME);
 
 $query="INSERT INTO basic(Bhamashah,aadhar,name) VALUES(\"".$bhID."\",\"".$aadhar."\",\"".$name."\")";
 
-echo $query;
 
 $result=$conn->query($query);
-
+    echo $result;
 ?>
