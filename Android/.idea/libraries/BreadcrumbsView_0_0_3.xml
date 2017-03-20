@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="BreadcrumbsView-0.0.3">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/c5979922e4d27226e8a240cb5cc9ab63db9f2688/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/c5979922e4d27226e8a240cb5cc9ab63db9f2688/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/a9990f8e7cf2e9ef2afc55ead713187fa27d93ec/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/a9990f8e7cf2e9ef2afc55ead713187fa27d93ec/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
