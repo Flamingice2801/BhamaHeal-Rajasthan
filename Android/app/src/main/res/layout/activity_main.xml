@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sodevan.bhamaheal.MainActivity">
+    android:background="#004957"
+    tools:context="com.sodevan.bhamaheal.MainActivity"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fa_heartbeat"
+        android:id="@+id/logo2"
+        android:textColor="#00C6AF"
+        android:textSize="100sp"
+        android:layout_centerHorizontal="true"
+        />
 
     <EditText
         android:id="@+id/BhamashahID"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="BhamashahID"
         android:inputType="number"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="201dp" />
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+        android:padding="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/logo2"
+
+        />
+
+
+    <EditText
+        android:id="@+id/UID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="U-ID"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/BhamashahID"
+        android:background="#fff"
+        android:padding="8dp"
+        android:layout_marginTop="20dp"
+
+
+        />
 
     <Button
         android:id="@+id/Enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Enter"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="288dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_below="@id/UID"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape2"
+        android:textColor="@color/colorWhite"
+
+
+ />
+</RelativeLayout>
