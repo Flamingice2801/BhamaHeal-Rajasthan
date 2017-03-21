@@ -3,30 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/ronaksakhuja/Projects/proj/BhamaHeal-Rajasthan/Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/ronaksakhuja/Projects/BhamaHeal-Rajasthan/Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/ronaksakhuja/Projects/proj/BhamaHeal-Rajasthan/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_74ba11b1d5bee6e924c7e38e771d7d12704d4981/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ronaksakhuja/.android/build-cache/3941c289e90bf7b3cd7552a9620a258aaec8cf08/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e3132fe10e3d715181f0f06e690e077be102172">
-        <dex dex="/Users/ronaksakhuja/Projects/proj/BhamaHeal-Rajasthan/Android/app/build/intermediates/pre-dexed/debug/classes_078d2e5c6d325bcf264b04af8fcd2f801585ff87.jar" />
+        <dex dex="/Users/ronaksakhuja/Projects/BhamaHeal-Rajasthan/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b62252a93f7ab305e459afee270bc0a872b8a101/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/ronaksakhuja/Projects/proj/BhamaHeal-Rajasthan/Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/ronaksakhuja/Projects/BhamaHeal-Rajasthan/Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="9a509b44c531bd3f9d6e529663be229364277d6c">
-        <dex dex="/Users/ronaksakhuja/Projects/proj/BhamaHeal-Rajasthan/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0ccfa75345891413c7dd5991a32c1e68293292e8/classes.dex" />
+        sha1="d1a40ba4e182016f013061e3ffeaf698c2d8ea5f">
+        <dex dex="/Users/ronaksakhuja/Projects/BhamaHeal-Rajasthan/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8a9de60443c69c92b81ba8f2b69108e2e996db26/classes.dex" />
     </item>
 
 </items>

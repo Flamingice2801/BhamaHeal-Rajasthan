@@ -11,7 +11,7 @@
         android:id="@+id/breadcrumbs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:numberOfSteps="5"
+        app:numberOfSteps="4"
         app:visitedStepBorderDotColor="@color/colorVisited"
         app:visitedStepFillDotColor="@color/colorVisited"
         app:nextStepBorderDotColor="@color/colorNext"
