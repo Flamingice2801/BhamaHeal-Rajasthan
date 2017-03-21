@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.sodevan.bhamaheal.Interface.APIservice;
 import com.sodevan.bhamaheal.R;
@@ -33,6 +34,14 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
+        TextView tv1,tv2,tv3,tv4 ;
+
+        tv1 = (TextView)findViewById(R.id.named) ;
+        tv2 = (TextView)findViewById(R.id.aged) ;
+        tv3 = (TextView)findViewById(R.id.bidu) ;
+        tv4 = (TextView)findViewById(R.id.uidu) ;
+
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -49,6 +58,13 @@ public class profile extends AppCompatActivity {
         age=sharedPreferences.getString("age","");
         name=sharedPreferences.getString("name","");
         uid=sharedPreferences.getString("memid","");
+
+        tv1.setText("Name : "+name);
+        tv2.setText("Age : "+age);
+        tv3.setText("Bh-Id : "+bhID);
+        tv4.setText("U-Id : "+uid);
+
+
 
         Log.d("TAGa",bhID);
 //        retrofit=new Retrofit.Builder()

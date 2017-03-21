@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="labelledspinner-1.1.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/fc78f06e280ea596a3d8612aa614ba710a775e31/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/fc78f06e280ea596a3d8612aa614ba710a775e31/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.farbod.labelledspinner/labelledspinner/1.1.5/77e3c9b359bf50f7151131b97bb3f3d05e208a06/labelledspinner-1.1.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

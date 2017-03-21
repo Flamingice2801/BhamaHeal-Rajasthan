@@ -7,7 +7,79 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.sodevan.bhamaheal.Activity.profile"
     tools:showIn="@layout/activity_profile"
-    android:id="@+id/ProfRel">
+    android:id="@+id/ProfRel"
+    android:padding="20dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+
+       >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account_circle_white_48dp"
+            android:id="@+id/circle"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circle"
+            android:padding="20dp"
+            android:background="#00B89B"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/named"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/named"
+            android:padding="20dp"
+            android:background="#00B89B"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/aged"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aged"
+            android:padding="20dp"
+            android:background="#00B89B"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/bidu"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bidu"
+            android:padding="20dp"
+            android:background="#00B89B"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/uidu"
+            />
+
+
+    </RelativeLayout>
 
 
 
