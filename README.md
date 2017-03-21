@@ -23,7 +23,7 @@ providing bhamshah and uid of the individual ;
   Languages Used : PHP
 
       
-##4) The Data  Analysis Portal  :
+## 4) The Data  Analysis Portal  :
 Finally we are analysing the date collected Using R Stastical Computing . we build bar-graphs and scatter plots on the basis of :
 
 1) Overview Rajasthan Map with districts compared on Average-Health-Index 
