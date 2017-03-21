@@ -1,5 +1,7 @@
 package com.sodevan.bhamaheal.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -44,11 +46,25 @@ public class AddMedical extends AppCompatActivity {
     LabelledSpinner ls;
     Typeface font;
     String blood;
+    String bhID,age,name,uid;
+
+
+    public static final String MyPREFERENCES="login_prefs";
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medical);
+
+        //getting sp values
+
+        sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        bhID=sharedPreferences.getString("bhID","");
+        age=sharedPreferences.getString("age","");
+        name=sharedPreferences.getString("name","");
+        uid=sharedPreferences.getString("memid","");
+
         //INITIALIZATION
         ls= (LabelledSpinner) findViewById(R.id.your_labelled_spinner);
         List<String> a=new ArrayList<>();
@@ -71,6 +87,7 @@ public class AddMedical extends AppCompatActivity {
 
         vf= (ViewFlipper) findViewById(R.id.viewflip);
         bc= (BreadcrumbsView) findViewById(R.id.breadcrumbs);
+
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -139,6 +156,7 @@ public class AddMedical extends AppCompatActivity {
         });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Log.d("TAG_i", String.valueOf(vf.indexOfChild(vf.getCurrentView())));
 
 
         ls.setOnItemChosenListener(new LabelledSpinner.OnItemChosenListener() {
@@ -177,16 +195,18 @@ public class AddMedical extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
+                Log.d("TAG", String.valueOf(vf.indexOfChild(vf.getCurrentView())));
+
                 if (String.valueOf(vf.indexOfChild(vf.getCurrentView()))=="0"){
 
 
-
+                    Log.d("click tracked","TAG");
 
                     String hb=et2.getText().toString();
                     String rbc=et3.getText().toString();
                     String plate=et4.getText().toString();
                     String chol=et5.getText().toString();
-                    Call<String> writec =apiservice.writeHealthOne("1234",chol,blood,hb,rbc,plate);
+                    Call<String> writec =apiservice.writeHealthOne(bhID,uid,chol,blood,hb,rbc,plate);
                     writec.enqueue(new Callback<String>() {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
@@ -195,12 +215,13 @@ public class AddMedical extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<String> call, Throwable t) {
-
+                        Log.d("TAG_ERRPR",t.getLocalizedMessage());
                         }
                     });
                     Log.d("TAG","here");
                 }
                 if (String.valueOf(vf.indexOfChild(vf.getCurrentView()))=="1"){
+                    Log.d("click 2 ","tracled");
                     EditText ett1,ett2,ett3,ett4,ett5,ett6;
                     ett1= (EditText) findViewById(R.id.lefteye);
                     ett2= (EditText) findViewById(R.id.righteye);
@@ -214,7 +235,7 @@ public class AddMedical extends AppCompatActivity {
                     String height=ett4.getText().toString();
                     String sugar=ett5.getText().toString();
                     String remarks=ett6.getText().toString();
-                    Call<String> writesecond = apiservice.writeHealthTwo("1234",lefteye,righteye,height,wght,sugar,remarks);
+                    Call<String> writesecond = apiservice.writeHealthTwo(bhID,uid,lefteye,righteye,height,wght,sugar,remarks);
                     writesecond.enqueue(new Callback<String>() {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
@@ -233,7 +254,7 @@ public class AddMedical extends AppCompatActivity {
                     for (int i = 0; i < allEds.size(); i++) {
                         Log.d("TAG", allEds.get(i).getText().toString());
                         s=s+allEds.get(i).getText().toString()+"+";
-                        Call<String> writehhist=apiservice.writeHealthThree("987","1234",s,"HISTORY");
+                        Call<String> writehhist=apiservice.writeHealthThree(bhID,uid,s,"HISTORY");
                         writehhist.enqueue(new Callback<String>() {
                             @Override
                             public void onResponse(Call<String> call, Response<String> response) {
@@ -247,12 +268,12 @@ public class AddMedical extends AppCompatActivity {
                         });
                     }
                 }
-                if(String.valueOf(vf.indexOfChild(vf.getCurrentView()))=="2") {
+                if(String.valueOf(vf.indexOfChild(vf.getCurrentView()))=="3") {
                     String ss="";
                     for (int i = 0; i < allEds2.size(); i++) {
                         Log.d("TAG2", allEds2.get(i).getText().toString());
                         ss=ss+allEds2.get(i).getText().toString()+"+";
-                        Call<String> writemedic=apiservice.writeHealthThree("987","1234",ss,"MEDICINE");
+                        Call<String> writemedic=apiservice.writeHealthThree(bhID,uid,ss,"MEDICINE");
                         writemedic.enqueue(new Callback<String>() {
                             @Override
                             public void onResponse(Call<String> call, Response<String> response) {
@@ -268,11 +289,113 @@ public class AddMedical extends AppCompatActivity {
                 }
 
 
-                Log.d("TAG", String.valueOf(vf.indexOfChild(vf.getCurrentView())));
                 try{bc.nextStep();}
                 catch (Exception e){Log.d("TAG","send intent now");
+//first
+                    Log.d("click tracked","TAG");
 
-                    Intent i=new Intent(AddMedical.this,profile.class);
+                    String hb=et2.getText().toString();
+                    String rbc=et3.getText().toString();
+                    String plate=et4.getText().toString();
+                    String chol=et5.getText().toString();
+                    Call<String> writec =apiservice.writeHealthOne(bhID,uid,chol,blood,hb,rbc,plate);
+                    writec.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            Log.d("TAG",response.body());
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Log.d("TAG_ERRPR",t.getLocalizedMessage());
+                        }
+                    });
+                    ///over
+
+
+                    //second
+
+                    EditText ett1,ett2,ett3,ett4,ett5,ett6;
+                    ett1= (EditText) findViewById(R.id.lefteye);
+                    ett2= (EditText) findViewById(R.id.righteye);
+                    ett3= (EditText) findViewById(R.id.weight);
+                    ett4=(EditText)  findViewById(R.id.height);
+                    ett5= (EditText) findViewById(R.id.sugar);
+                    ett6= (EditText) findViewById(R.id.remark);
+                    String lefteye=ett1.getText().toString();
+                    String righteye=ett2.getText().toString();
+                    String wght=ett3.getText().toString();
+                    String height=ett4.getText().toString();
+                    String sugar=ett5.getText().toString();
+                    String remarks=ett6.getText().toString();
+                    Call<String> writesecond = apiservice.writeHealthTwo(bhID,uid,lefteye,righteye,height,wght,sugar,remarks);
+                    writesecond.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+
+                        }
+                    });
+
+
+                    ///over
+
+                    //third
+
+
+                    String s="";
+                    for (int i = 0; i < allEds.size(); i++) {
+                        Log.d("TAG", allEds.get(i).getText().toString());
+                        s=s+allEds.get(i).getText().toString()+"+";
+                        Call<String> writehhist=apiservice.writeHealthThree(bhID,uid,s,"HISTORY");
+                        writehhist.enqueue(new Callback<String>() {
+                            @Override
+                            public void onResponse(Call<String> call, Response<String> response) {
+                                Log.d("TAG",response.body());
+                            }
+
+                            @Override
+                            public void onFailure(Call<String> call, Throwable t) {
+
+                            }
+                        });
+                    }
+
+
+                    ///over
+
+
+                    //fourth
+
+                    String ss="";
+                    for (int i = 0; i < allEds2.size(); i++) {
+                        Log.d("TAG2", allEds2.get(i).getText().toString());
+                        ss=ss+allEds2.get(i).getText().toString()+"+";
+                        Call<String> writemedic=apiservice.writeHealthThree(bhID,uid,ss,"MEDICINE");
+                        writemedic.enqueue(new Callback<String>() {
+                            @Override
+                            public void onResponse(Call<String> call, Response<String> response) {
+                                Log.d("TAG",response.body());
+                            }
+
+                            @Override
+                            public void onFailure(Call<String> call, Throwable t) {
+
+                            }
+                        });
+                    }
+
+                    //over
+
+
+
+
+
+                    Intent i=new Intent(AddMedical.this,Splash.class);
                     startActivity(i);
                     ;}
                 vf.showNext();
