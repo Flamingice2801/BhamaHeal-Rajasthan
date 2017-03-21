@@ -1,0 +1,354 @@
+/*  Generic */
+html , body  {
+  height: 100% ;
+  width: 100% ;
+  overflow: hidden;
+
+}
+
+header{
+  width: 100% ;
+  height: 60px;
+
+
+}
+
+a,p,h2,h3,h4,h5 {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+a , a:visited ,a:active ,a:focus, a:hover{
+  text-decoration: none;
+  color: #00C6AF;
+
+}
+
+
+a {
+  color: #00C6AF ;
+}
+
+
+/* top-bar */
+
+
+.top-bar {
+  width: 100% ;
+  background-color: #00B79D ;
+  height: 60px;
+  position: fixed;
+  white-space: nowrap;
+
+}
+
+.top-bar .logo  {
+  width: 60px;
+  height: 60px;
+  float: left;
+  background-color: #00C6AF ;
+}
+
+.top-bar .logo i {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 40px;
+}
+
+.top-bar h3 {
+  color : #fff ;
+  float: left;
+  display:inline;
+  font-weight: 100 ;
+  line-height: 10px;
+  margin-left: 15px ;
+  background-color:#00C6AF ;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius:2px ;
+}
+
+/* r-box */
+
+.r-box {
+  float: right;
+}
+.r-box ul {
+  padding-top:  8px;
+  padding-right: 15px;
+}
+.r-box ul li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: #00C6AF;
+  padding: 10px;
+}
+
+.r-box ul li i {
+  font-size: 22px;
+}
+
+.r-box ul li:hover i {
+  color: #00333F;
+}
+
+
+ /* Side Navbar */
+
+.side-navbar {
+  height: 100% ;
+  width: 60px;
+  background-color: #00333F ;
+  float: left;
+  position: fixed;
+  padding-top: 20px;
+
+}
+
+.side-navbar ul {
+  list-style-type: none;
+  padding: 0 ;
+  margin : 0 ;
+  text-align: center;
+}
+
+.side-navbar ul li {
+  margin-bottom: 30px;
+}
+.side-navbar ul li i {
+  font-size: 22px;
+  color: #00C6AF;
+  margin-bottom: 4px;
+
+}
+
+.side-navbar ul li p {
+  margin-top: -3px;
+  font-size: 9px;
+}
+
+.side-navbar ul li a:hover i  {
+
+  color: #fff ;
+  opacity: 0.9 ;
+}
+
+.side-navbar ul > .active > a >i {
+  color: #fff ;
+}
+
+.side-navbar ul li a:hover p {
+
+  color: #fff ;
+  opacity: 0.9;
+
+}
+
+.side-navbar ul > .active > a >p {
+  color: #fff ;
+}
+
+
+
+/* Dynamic -content */
+
+
+.dynamic-content {
+  width: calc(100% - 60px);
+  height: 100%;
+  float: right;
+  background-color: #00333F;
+
+}
+
+.container-inner {
+  position: relative;
+  height: 100% ;
+}
+
+.dynamic-content h4{
+  color: #fff;
+  font-weight:300;
+  padding: 30px;
+}
+
+/* Analysis Area  */
+
+.analysis-area {
+  height: 100% ;
+  float: left;
+  overflow-y: scroll;
+
+
+}
+
+.analysis-area .inside-area {
+  padding: 10px;
+}
+
+ .row {
+  padding: 0;
+  margin: 0 ;
+}
+/* GRAPH-BAR */
+.bar {
+  width: calc(100%) ;
+  height: 40px ;
+  background-color: #004957 ;
+}
+
+.bar p {
+  color: #fff;
+  line-height: 40px;
+  font-weight:100 ;
+  margin-left: 25px;
+  float: left;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* GRAPH-AREA */
+
+.inside-area {
+  width: calc(100%) ;
+  background: #E1E2E3 ;
+  z-index: 100 ;
+
+}
+
+
+/* status bar  */
+.status-bar{
+  height: 50% ;
+  float: left;
+  width: 20% ;
+  margin-left: 20px;
+
+}
+
+.status-bar .inside-area {
+  background: #fff ;
+  overflow-y: scroll;
+}
+
+.status-bar i{
+  font-size: 25px;
+  line-height: 40px;
+  float: right;
+  padding-right: 30px;
+
+}
+
+.status-bar .inside-area p{
+  padding: 20px;
+}
+
+.loader-inner {
+  position: fixed;
+  left: 50% ;
+  top: 50% ;
+  z-index: 9999999;
+}
+
+.loader-inner.ball-pulse div{
+  background-color: #00C6AF;
+}
+
+.stats-box {
+  padding: 0 ;
+  opacity: 0.6 ;
+
+}
+
+.stats-box-inner {
+
+  height: 200px  ;
+  background: #ECEDEE;
+}
+
+.stats-text-area {
+  height: 195px;
+  padding: 10px;
+}
+
+.stats-text-area h4 {
+  color: #00C6AF;
+  font-weight: 400;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.stats-text-area h1{
+  font-weight: 800 ;
+}
+
+.stats-text-area .district {
+  color: #004957;
+  font-weight: 700;
+}
+
+.stats-text-area .date {
+  font-size: 12px;
+}
+
+.stats > .row > .active {
+  opacity: 1 ;
+}
+.stats > .row > .active > a > .stats-box-inner {
+  background: #fff;
+  border-bottom: 1px solid rgba(106, 105, 100, .1);
+}
+
+
+
+
+
+.colorstrip {
+  height: 5px;
+}
+
+
+
+.colorstrip-max {
+  background: #00C6AF ;
+}
+
+.colorstrip-min {
+  background: #FF4D1B ;
+}
+
+.colorstrip-avg {
+  background: #F99400;
+}
+
+
+.graph-area-inner {
+
+  background: #fff;
+}
+
+
+.graph-area-inner img {
+
+  background: #fff;
+  margin-left: 17%;
+  margin-bottom: 130px;
+
+}
+
+
+.graph-spinner {
+  margin-top: 10px;
+  float: right;
+  margin-right: 20px;
+}
+
+
+.cg img {
+
+  margin-left: 300px;
+  margin-top: 100px;
+  margin-bottom: 100px ;
+
+}
